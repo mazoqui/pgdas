@@ -300,6 +300,7 @@ npm run dev        # servidor de desenvolvimento
 npm test           # testes (Vitest)
 npm run lint       # oxlint
 npm run build      # gera o site estático em dist/
+npm run build:single  # gera tudo num único arquivo: dist-single/pgdas.html
 npm run preview    # serve o dist/ localmente
 ```
 
@@ -315,6 +316,17 @@ Para rodar um único teste: `npx vitest run -t "withheld revenue"`.
 
 O resultado de `npm run build` é um site estático, sem servidor, que pode ser publicado em qualquer hospedagem de
 arquivos (GitHub Pages, Netlify, Cloudflare Pages etc.).
+
+### Versão em arquivo único
+
+`npm run build:single` gera **`dist-single/pgdas.html`**, um único arquivo HTML (cerca de 2 MB) com tudo dentro: o
+código, os estilos, o leitor de PDF e o ícone. Ele funciona aberto direto do computador, com duplo clique e sem
+internet, e pode ser enviado por e-mail ou guardado num pendrive.
+
+Nessa versão a _Content-Security-Policy_ é ainda mais restrita: libera só os scripts que estão no próprio arquivo,
+identificados pelo hash SHA-256, e **proíbe qualquer conexão** (`connect-src 'none'`). O leitor de PDF roda na própria
+página, e não num _worker_ à parte, porque os navegadores não permitem iniciar esse _worker_ num arquivo aberto do disco.
+Para um extrato de duas ou três páginas a diferença não é perceptível.
 
 ## Licença
 

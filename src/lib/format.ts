@@ -3,6 +3,9 @@ import type { PgdasErrorCode } from "./pgdas";
 /** Where the PGDAS-D statements are downloaded. */
 export const PORTAL_URL = "https://www8.receita.fazenda.gov.br/SimplesNacional/Servicos/Grupo.aspx?grp=5";
 
+/** This project's source code; errors are reported as issues there. */
+export const REPO_URL = "https://github.com/mazoqui/pgdas";
+
 const money = new Intl.NumberFormat("pt-BR", { style: "currency", currency: "BRL" });
 
 /** Cents → "R$ 1.234,56". */
