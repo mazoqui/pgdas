@@ -8,6 +8,8 @@ Página web gratuita, pública e sem login que lê o **Extrato do Simples Nacion
 que a empresa informa na **nota fiscal de serviço (NFS-e)**. Junto com os números, a página traz a **explicação passo a
 passo** de como cada um foi obtido e uma **conferência pelas tabelas da Lei Complementar 123/2006**.
 
+[Demo](https://zoqui.com/pgdas.html)
+
 Basta enviar o PDF. Não é preciso digitar nenhum outro dado.
 
 > [!WARNING]
