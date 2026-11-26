@@ -116,8 +116,9 @@ export function Result({ result }: { result: PgdasResult }) {
         <CardContent className="space-y-8">
           <Step n={1} title="O período e o mês em que as alíquotas valem">
             <p>
-              O extrato é do período de apuração <strong>{result.period}</strong>. Pela LC 123/2006, art. 21, §4º, I, a
-              nota fiscal usa a alíquota efetiva apurada <strong>no mês anterior ao da prestação</strong>. Por isso estas
+              O extrato é do período de apuração <strong>{result.period}</strong>. Quando o tomador retém o ISS, a nota
+              deve informar a alíquota efetiva de ISS a que a empresa estava sujeita <strong>no mês anterior ao da
+              prestação</strong> (LC 123/2006, art. 21, §4º, I), e a alíquota do Simples segue o mesmo mês. Por isso estas
               alíquotas valem para os serviços prestados a partir de <strong>{result.from}</strong>, até sair o extrato do
               mês seguinte.
             </p>

@@ -2,12 +2,15 @@
   "name": "pgdas",
   "private": true,
   "version": "0.0.0",
+  "description": "Alíquotas do Simples Nacional e do ISS a partir do extrato do PGDAS-D, calculadas no navegador.",
+  "license": "Unlicense",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "oxlint",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "vitest run"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.3.5",
